@@ -1,0 +1,76 @@
+{  
+    "classe":[  
+       "guerriero",
+       "paladino",
+       "chierico",
+       "mago",
+       "stregone",
+       "ladro",
+       "assassino",
+       "monaco",
+       "barbaro"
+    ],
+    "razza":[  
+       "nano",
+       "elfo"
+    ],
+    "genere":[  
+       "maschio",
+       "femmina",
+       "dubbio"
+    ],
+    "allineamento":[  
+       "pastafariano",
+       "vegano",
+       "terrapiattista",
+       "respiriano",
+       "fruttariano",
+       "vegetariano",
+       "ingegnere"
+    ],
+    "taglia":[  
+       "ben cotta",
+       "al sangue",
+       "media cottura"
+    ],
+    "dio":[  
+       "gesu",
+       "gepiu",
+       "gesdestra",
+       "gegiu",
+       "gesub",
+       "gesinistra",
+       "maometto",
+       "manonlometto",
+       "alla'",
+       "aquah",
+       "alli",
+       "aqui",
+       "albar",
+       "flyingspaghettimonster"
+    ],
+    "nomi":{  
+       "nano":{  
+          "maschio":[  
+             "dotto", "cucciolo", "brontolo", "eolo", "mammolo", "stronzolo", "pisolo", "tyrion"
+          ],
+          "femmina":[  
+             "alacla", "aladda", "alaenoic", "alaera", "alallyra", "aleallyra", "alebrylla", "alella", "alelonna", "alibrylla"
+          ],
+          "dubbio":[  
+             "giggia"
+          ]
+       },
+       "elfo":{  
+          "maschio":[  
+             "link", "aerandir", "amdír", "amrod", "angrod", "aranel", "arminas", "ausir", "beleg", "bronweg", "caranthir"
+          ],
+          "femmina":[  
+             "ainwen", "amarië", "aredhel", "arwen", "brethil", "eärwen", "enelyë", "fanuilos", "galadriel", "idrial"
+          ],
+          "dubbio":[  
+             "ngulammammeta"
+          ]
+       }
+    }
+ }
