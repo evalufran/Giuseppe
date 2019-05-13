@@ -96,8 +96,7 @@ type Personaggio struct {
 	Classe       string
 }
 
-func (p *Personaggio) Genera(utente, genere string) error {
-	p.Utente = utente
+func (p *Personaggio) Genera(genere string) error {
 	p.Genere = genere
 	p.Nome = "pippo"
 
@@ -109,7 +108,7 @@ func (p *Personaggio) Genera(utente, genere string) error {
 // 	return nil
 // }
 
-func proponiDomanda( domanda string, valoreObiettivo *string, selezioniPossibili []string ) error {
+func proponiDomandaChiusa( domanda string, valoreObiettivo *string, selezioniPossibili []string ) error {
 	for *valoreObiettivo == "" {
 		//chiede nel terminale la preferenza dell'utente
 		fmt.Println(domanda)
@@ -138,6 +137,23 @@ func proponiDomanda( domanda string, valoreObiettivo *string, selezioniPossibili
 	return nil
 }
 
+func proponiDomandaAperta( domanda string, valoreObiettivo *string ) error {
+	for *valoreObiettivo == "" {
+		//chiede nel terminale la preferenza dell'utente
+		fmt.Println(domanda)
+		
+		fmt.Print(": ")
+
+		//Legge quello che l'utente ha scelto
+	
+		_, err := fmt.Scanf("%s", valoreObiettivo)
+		checkErrors(err)
+
+	}
+
+	return nil
+}
+
 func init() {
 	checkErrors(ReadFromJSON(&Conf, "conf.json"))
 }
@@ -145,11 +161,12 @@ func init() {
 func main() {
 	personaggio := new(Personaggio)
 
-	checkErrors(proponiDomanda("inserisci qui la tua razza.", &personaggio.Razza, Conf.Razza))
-
+	checkErrors(proponiDomandaChiusa("inserisci qui il tuo razza.", &personaggio.Razza, Conf.Razza))
+	checkErrors(proponiDomandaAperta("inserisci qui il tuo nome utente.", &personaggio.Utente))
+	
 	
 
-	checkErrors(personaggio.Genera("io", "maschio"))
+	checkErrors(personaggio.Genera( "maschio"))
 	log.Println(personaggio)
 
 	// //copia il file dnd, producendo la schedaPersonaggio

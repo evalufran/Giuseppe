@@ -1,0 +1,28 @@
+...
+
+func proponiDomandaAperta( domanda string, valoreObiettivo *string ) error {
+	for *valoreObiettivo == "" {
+		//chiede nel terminale la preferenza dell'utente
+		fmt.Println(domanda)
+		
+		fmt.Print(": ")
+
+		//Legge quello che l'utente ha scelto
+	
+		_, err := fmt.Scanf("%s", valoreObiettivo)
+		checkErrors(err)
+
+	}
+
+	return nil
+}
+
+...
+
+func main (){
+
+...
+checkErrors(proponiDomandaChiusa("inserisci qui il tuo razza.", &personaggio.Razza, Conf.Razza))
+	
+checkErrors(proponiDomandaAperta("inserisci qui il tuo nome utente.", &personaggio.Utente))
+...
